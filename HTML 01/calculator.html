@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                let num1=parseInt(document.getElementById("num1").value)
+                let num2=parseInt(document.getElementById("num2")["value"])
+                let op=document.getElementById("op").value
+                let result
+                switch(op)
+                {
+                    case '+': result=num1+num2;break;
+                    case '-':result= num1-num2;break;
+                    case '*':result=num1*num2;break;
+                    case '/':result=num1/num2;break;
+                }
+                //let output=num1+" "+op+" "+y+"="+result
+                let output=`<i> ${num1} ${op} ${num2} =${result}</i>`
+                document.getElementById("res").innerHTML=output
+            }
+
+        </script>
+    </head>
+    <body>
+        Enter 1st number: <input type="number" id="num1"/>
+        <br>
+        Enter 2nd number: <input type="number" id="num2"/>
+        <br>
+        Enter the operation: <select id="op" onclick="calculate()">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+        <p id="res">The result is</p>
+    </body>
+</html>
