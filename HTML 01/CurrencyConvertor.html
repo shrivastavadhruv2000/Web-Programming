@@ -1,3 +1,4 @@
+<!--- 08 Assign 5--->
 <html>
     <head>
         <title>
@@ -6,18 +7,18 @@
         <script>
             function curCon(){
                 let amount=parseInt(document.getElementsById("num").value)
-                let x=document.getElementById("1").value
-                let y=document.getElementById("2").value
+                let x=parseInt(document.getElementById("1").value)
+                let y=parseInt(document.getElementById("2").value)
 
                 let result
                 switch(x){
-                    case '&#36':switch(y){
-                        case '&#165':result=amount*144;break;
-                        case '&#8360':result=amount*80;break;
+                    case 0:switch(y){
+                        case 1 :result=amount*144;break;
+                        case 2 :result=amount*80;break;
                     }
-                    case '&#165':switch(y){
-                        case '&#36':result=amount*5;break;
-                        case '&#8360':result=amount*10;break;
+                    case  1 :switch(y){
+                        case 0 :result=amount*5;break;
+                        case  2 :result=amount*10;break;
                     }
 
                 }
@@ -30,19 +31,19 @@
         Enter the number <input type="number" id="num"/>
         <br>
         Convert from:<select id="1">
-            <option>&#36</option>
-            <option>&#165</option>
-            <option>&#8360</option>
-            <option>&#163</option>
-            <option>&#8364</option>
+            <option value="0">&#36</option>
+            <option value="1">&#165</option>
+            <option value="2">&#8360</option>
+            <option value="3">&#163</option>
+            <option value="4">&#8364</option>
         </select>
         <br>
         convert to:<select id="2">
-            <option>&#36</option>
-            <option>&#165</option>
-            <option>&#8360</option>
-            <option>&#163</option>
-            <option>&#8364</option>
+            <option value="0">&#36</option>
+            <option value="1">&#165</option>
+            <option value="2">&#8360</option>
+            <option value="3">&#163</option>
+            <option value="4">&#8364</option>
         </select>
         
         <br>
