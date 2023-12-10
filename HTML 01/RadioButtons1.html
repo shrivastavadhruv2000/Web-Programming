@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            function forMale(){
+                let name=document.getElementById("1").value
+                let lname=document.getElementById("2").value
+                let fullname="Mr "+lname.charAt(0).toUpperCase() +lname.substr(1).toLowerCase() + " "+name.charAt(0).toUpperCase()+name.substr(1).toLowerCase()
+                document.getElementById("res").innerHTML=fullname
+            }
+            function forFemale(){
+                let name=document.getElementById("1").value
+                let lname=document.getElementById("2").value
+                let fullname="M "+lname.charAt(0).toUpperCase() +lname.substr(1).toLowerCase() + " "+name.charAt(0).toUpperCase()+name.substr(1).toLowerCase()
+                document.getElementById("res").innerHTML=fullname
+
+            }
+        </script>
+
+    </head>
+    <body>
+        FirstName: <input type="text" id="1"/>
+        LastName: <input type="text" id="2"/>
+        Male: <input type="radio" name="readability" onclick="forMale()"/>
+        Female: <input type="radio" name="readability"onclick="forFemale()"/>
+        <p id="res"></p>
+    </body>
+</html>
