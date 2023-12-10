@@ -12,8 +12,14 @@
                 let result
                 switch(x){
                     case '&#36':switch(y){
-                        case '&#165':result=amount*144;break
+                        case '&#165':result=amount*144;break;
+                        case '&#8360':result=amount*80;break;
                     }
+                    case '&#165':switch(y){
+                        case '&#36':result=amount*5;break;
+                        case '&#8360':result=amount*10;break;
+                    }
+
                 }
                 document.getElementById("res").innerHTML=result
             }
@@ -45,3 +51,4 @@
         <p id="res"> </p>
     </body>
 </html>
+
