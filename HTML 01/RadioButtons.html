@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+            function strng(){
+                let str=document.getElementById("s1").value
+                let str1=str.toUpperCase()
+                document.getElementById("1s").innerHTML=str1
+
+                }
+               
+                function strng1(){
+                    let str=document.getElementById("s1").value
+                    let str1=str.toLowerCase()
+                    document.getElementById("1s").innerHTML=str1
+                    
+                }
+                function strng2(){
+                    let str=document.getElementById("s1").value
+                    let str1=str.charAt(0).toUpperCase()+str.substr(1).toLowerCase()
+                    document.getElementById("1s").innerHTML=str1
+                }
+
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="s1" />
+        Capital:<input type="radio" id="r1" name="readability" onchange="strng()"/>
+        small:<input type="radio" id="r2" name="readability" onchange="strng1()"/>
+        Titlecase:<input type="radio" id="r3" name="readability" onchange="strng2()"/>
+        <p id="1s"></p>
+        
+    </body>
+</html>
