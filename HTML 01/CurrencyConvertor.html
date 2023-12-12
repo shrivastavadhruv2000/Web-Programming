@@ -6,9 +6,9 @@
         </title>
         <script>
             function curCon(){
-                let amount=parseInt(document.getElementsById("num").value)
-                let x=parseInt(document.getElementById("1").value)
-                let y=parseInt(document.getElementById("2").value)
+                let amount=parseInt(document.getElementsById("Value").value)
+                let x=parseInt(document.getElementById("from").value)
+                let y=parseInt(document.getElementById("to").value)
 
                 let result
                 switch(x){
@@ -28,9 +28,9 @@
 
     </head>
     <body>
-        Enter the number <input type="number" id="num"/>
+        Enter the number <input type="number" id="Value"/>
         <br>
-        Convert from:<select id="1">
+        Convert from:<select id="from">
             <option value="0">&#36</option>
             <option value="1">&#165</option>
             <option value="2">&#8360</option>
@@ -38,7 +38,7 @@
             <option value="4">&#8364</option>
         </select>
         <br>
-        convert to:<select id="2">
+        convert to:<select id="to">
             <option value="0">&#36</option>
             <option value="1">&#165</option>
             <option value="2">&#8360</option>
