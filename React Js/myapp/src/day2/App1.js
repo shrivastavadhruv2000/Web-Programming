@@ -1,0 +1,30 @@
+import { useState } from "react";
+import Hello from "./Hello";
+import SayHi from "./sayHi";
+
+export default function App1()
+{
+    
+    
+    let [col,setcol] = useState("red")
+    function handler(event)
+    {
+        console.log(event.target.value)
+        setcol(event.target.value)
+    }
+
+
+
+    return(
+        <>
+       
+        
+         Enter Color:<input type="color" onChange={handler} /> */}
+        <Hello name={"Dhruv"} col={col}></Hello> 
+        <SayHi msg="hello" ></SayHi> 
+       
+        </>
+    )
+}
+
+
