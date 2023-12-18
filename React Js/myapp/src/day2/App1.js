@@ -3,6 +3,7 @@ import Hello from "./Hello";
 import SayHi from "./sayHi";
 import CaseExample from "./CaseExample";
 import ShowMonthName from "./ShowMonthName";
+import { HalfString } from "./halfString";
 
 export default function App1()
 {
@@ -26,6 +27,7 @@ export default function App1()
         <SayHi msg="hello" ></SayHi> 
         <CaseExample></CaseExample>
         <ShowMonthName></ShowMonthName>
+        <HalfString></HalfString>
        
         </>
     )
