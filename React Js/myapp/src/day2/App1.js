@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hello from "./Hello";
 import SayHi from "./sayHi";
+import CaseExample from "./CaseExample";
 
 export default function App1()
 {
@@ -19,9 +20,10 @@ export default function App1()
         <>
        
         
-         Enter Color:<input type="color" onChange={handler} /> */}
+         Enter Color:<input type="color" onChange={handler} /> 
         <Hello name={"Dhruv"} col={col}></Hello> 
         <SayHi msg="hello" ></SayHi> 
+        <CaseExample></CaseExample>
        
         </>
     )
