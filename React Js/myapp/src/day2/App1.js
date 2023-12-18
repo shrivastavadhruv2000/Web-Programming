@@ -2,6 +2,7 @@ import { useState } from "react";
 import Hello from "./Hello";
 import SayHi from "./sayHi";
 import CaseExample from "./CaseExample";
+import ShowMonthName from "./ShowMonthName";
 
 export default function App1()
 {
@@ -24,6 +25,7 @@ export default function App1()
         <Hello name={"Dhruv"} col={col}></Hello> 
         <SayHi msg="hello" ></SayHi> 
         <CaseExample></CaseExample>
+        <ShowMonthName></ShowMonthName>
        
         </>
     )
