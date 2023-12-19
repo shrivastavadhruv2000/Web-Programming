@@ -4,7 +4,6 @@ import SayHi from "./sayHi";
 import CaseExample from "./CaseExample";
 import ShowMonthName from "./ShowMonthName";
 import { HalfString } from "./halfString";
-import { StudentData } from "./StudentData";
 
 export default function App1()
 {
@@ -29,7 +28,6 @@ export default function App1()
         <CaseExample></CaseExample>
         <ShowMonthName></ShowMonthName>
         <HalfString></HalfString>
-        <StudentData></StudentData>
        
         </>
     )
