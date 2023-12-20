@@ -16,6 +16,10 @@ export default function FormText(props) {
     const handleOnChange=(event)=>{
          setText(event.target.value)
     }
+
+    const handleOnClear=(event)=>{
+      setText(" ")
+ }
     
     
   return (
@@ -30,6 +34,7 @@ export default function FormText(props) {
   </div>
   <button className="btn-btn-primar " onClick={handleOnClick}>convert to UpperCase</button>
   <button className="btn-btn-primar mx-3" onClick={handlerOnClick}>convert to LowerCase</button>
+  <button className='btn-btn-primary' onClick={handleOnClear}>Clear</button>
   </div>
   
   <div className=" container mb-3">
