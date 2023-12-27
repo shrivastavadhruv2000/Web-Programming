@@ -1,0 +1,8 @@
+body{
+    border: solid 3px red;
+    background-color: blue;
+    align-self: center;
+    padding-left: 50px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
