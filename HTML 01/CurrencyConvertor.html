@@ -4,6 +4,34 @@
         <title>
             Currency Converter
         </title>
+
+        <style>
+            *{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 1.0em;
+                font-weight: bold;
+                font-style: italic;
+            }
+            #Value{
+                padding: 100px
+            }
+            #from{
+                background-color: orange;
+                border-color: green;
+            }
+
+            select{
+                border-radius: 100px;
+                width: 100px;
+                text-align: center;
+                margin: 10px;
+            }
+
+            #clicked{
+                background: purple;
+                width: 100px;
+            }
+        </style>
         <script>
             function curCon(){
                 let amount=parseInt(document.getElementsById("Value").value)
@@ -48,7 +76,7 @@
         
         <br>
         <br>
-        <input type="button" id="3" value="Convert" onclick="curCon()"/>
+        <input type="button" id="clicked" value="Convert" onclick="curCon()"/>
         <p id="res"> </p>
     </body>
 </html>
