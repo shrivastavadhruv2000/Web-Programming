@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function AboutUs() {
 
     const [mystyle,setMyStyle]=useState({
-        color:"white",
+        color:"orange",
         backgroundColor:"black"
       } )
     const [btn,setBtn]=useState("Enable to Dark")  
@@ -64,7 +64,8 @@ export default function AboutUs() {
   </div>
 </div>
 <div className='container my-3'>
-<button  onClick={toggleStyle} type="button" className='btn-btn-primary'></button>
-</div>   </div>
+<button width="100px" onClick={toggleStyle} type="button"  className='btn-btn-primary mx-8'>{btn}</button>
+</div>  
+</div>
   )
 }
