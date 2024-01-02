@@ -3,7 +3,7 @@ export default function Welcome()
     return(
         <div>
             <p>Hello</p>
-        <input type="text"></input>
+        {/* <input type="text"></input> */}
         </div>
         
        
