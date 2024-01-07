@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <script>
+         function f1(){
+         let bday=document.getElementById("id1").value 
+         let today=new Date()
+         //console.log(typeof(bday))
+         //console.log(bday)
+         let y=bday.substring(0,4)
+         //console.log(y)
+         let y1=today.getFullYear()
+         //console.log(y1)
+         let diff=y1-y
+         document.getElementById("show").innerHTML=diff+" years"
+
+         let m=bday.substring(5,7)
+         console.log(m)
+         let m1=today.getMonth()+1
+         console.log(m1)
+
+
+
+         }
+      </script>
+    </head>
+    <body>
+       DATE OF BIRTH<input type="date" id="id1"/>
+       <input type="button" value="AGE" id="bt" onclick="f1()"/>
+       <span id="show" style="border: 1px solid">day</span>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            function operation(){
+                let num1= parseInt(document.getElementById("1st").value)
+                let num2= parseInt(document.getElementById("2nd").value)
+                let option=document.getElementById("option").value
+                let res;
+                switch(option){
+                    case '+':result=num1+num2;break;
+                    case '-':result=num1-num2;break;
+                    case '*':result=num1*num2;break;
+                    case '/':result=num1/num2;break;
+                }
+
+                // let outputstr = num1+" "+option+" "+num2+"="+res
+                let outputstr = `<i> ${num1} ${option} ${num2} = ${res} </i>`
+                document.getElementById("sp1").innerHTML = outputstr
+        //document.getElementById("sp1").innerText = outputstr
+                
+            }
+        </script>
+
+    </head>
+    <body>
+        <pre>
+            Enter 1st number:<input type="number" id="1st"/>
+        Enter 2nd number:<input type="number" id="2nd"/>
+        <select id="option" onchange="operation()">
+        <option>Select op</option>
+        <option >+</option>
+        <option >-</option>
+        <option >*</option>
+        <option>/</option><br/>
+        </select>
+        <p>The result is <span id="sp1"></span></p>
+        </pre>
+    </body>
+</html>

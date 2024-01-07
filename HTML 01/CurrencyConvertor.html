@@ -1,19 +1,54 @@
+<!--- 08 Assign 5--->
 <html>
     <head>
         <title>
             Currency Converter
         </title>
+
+        <style>
+            *{
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 1.0em;
+                font-weight: bold;
+                font-style: italic;
+            }
+            #Value{
+                padding: 100px
+            }
+            #from{
+                background-color: orange;
+                border-color: green;
+            }
+
+            select{
+                border-radius: 100px;
+                width: 100px;
+                text-align: center;
+                margin: 10px;
+            }
+
+            #clicked{
+                background: purple;
+                width: 100px;
+            }
+        </style>
         <script>
             function curCon(){
-                let amount=parseInt(document.getElementsById("num").value)
-                let x=document.getElementById("1").value
-                let y=document.getElementById("2").value
+                let amount=parseInt(document.getElementsById("Value").value)
+                let x=parseInt(document.getElementById("from").value)
+                let y=parseInt(document.getElementById("to").value)
 
                 let result
                 switch(x){
-                    case '&#36':switch(y){
-                        case '&#165':result=amount*144;break
+                    case 0:switch(y){
+                        case 1 :result=amount*144;break;
+                        case 2 :result=amount*80;break;
                     }
+                    case  1 :switch(y){
+                        case 0 :result=amount*5;break;
+                        case  2 :result=amount*10;break;
+                    }
+
                 }
                 document.getElementById("res").innerHTML=result
             }
@@ -21,27 +56,28 @@
 
     </head>
     <body>
-        Enter the number <input type="number" id="num"/>
+        Enter the number <input type="number" id="Value"/>
         <br>
-        Convert from:<select id="1">
-            <option>&#36</option>
-            <option>&#165</option>
-            <option>&#8360</option>
-            <option>&#163</option>
-            <option>&#8364</option>
+        Convert from:<select id="from">
+            <option value="0">&#36</option>
+            <option value="1">&#165</option>
+            <option value="2">&#8360</option>
+            <option value="3">&#163</option>
+            <option value="4">&#8364</option>
         </select>
         <br>
-        convert to:<select id="2">
-            <option>&#36</option>
-            <option>&#165</option>
-            <option>&#8360</option>
-            <option>&#163</option>
-            <option>&#8364</option>
+        convert to:<select id="to">
+            <option value="0">&#36</option>
+            <option value="1">&#165</option>
+            <option value="2">&#8360</option>
+            <option value="3">&#163</option>
+            <option value="4">&#8364</option>
         </select>
         
         <br>
         <br>
-        <input type="button" id="3" value="Convert" onclick="curCon()"/>
+        <input type="button" id="clicked" value="Convert" onclick="curCon()"/>
         <p id="res"> </p>
     </body>
 </html>
+

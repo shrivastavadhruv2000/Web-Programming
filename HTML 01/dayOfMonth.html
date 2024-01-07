@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>Day of Month</title>
+        <script>
+            function f1(){
+                let month=parseInt(document.getElementById("month").value)
+                let value1
+                let value2
+                switch(month){
+                    case 1:value1="January";break;
+                    case 2:value1="Feburary";break;
+                    case 3:value1="March";break;
+                    case 4:value1="April";break;
+                    case 5:value1="May";break;
+                    case 6:value1="June";break;
+                    case 7:value1="July";break;
+                    case 8:value1="August";break;
+                    case 9:value1="September";break;
+                    case 10:value1="October";break;
+                    case 11:value1="November";break;
+                    case 12:value1="December";break;
+                }
+
+                let day=parseInt(document.getElementById("day").value)
+
+                switch(day){
+                    case 1:value2="Monday";break;
+                    case 1:value2="Tuesday";break;
+                    case 1:value2="Wednesday";break;
+                    case 1:value2="Thusday";break;
+                    case 1:value2="Friday";break;
+                    case 1:value2="Saturday";break;
+                    case 1:value2="Sunday";break;
+
+                }
+
+                document.getElementById("month1").value=value1
+                document.getElementById("day1").value=value2
+
+            }
+        </script>
+    </head>
+    <body>
+        Month:<select id="month" onclick="f1()">
+            <option>1</option>
+            <option>3</option>
+            <option>2</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            
+        </select>
+        <input type="text" value="Month" id="month1"/>
+        <br>
+       Day: <select id="day" onchange="f1()">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+
+        </select>
+        
+        <input type="text" value="Day" id="day1"/>
+
+    </body>
+</html>
