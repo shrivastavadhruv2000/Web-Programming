@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays in JavaScript</title>
+    <script>
+        function addName() {
+            var name = document.getElementById('nameInput').value;
+            if(name) {
+                var array = [];
+                if(localStorage.getItem('names')) {
+                    array = JSON.parse(localStorage.getItem('names'));
+                }
+                array.push(name);
+                localStorage.setItem('names', JSON.stringify(array));
+                displayArray();
+            }
+        }
+
+        function displayArray() {
+            var array = JSON.parse(localStorage.getItem('names'));
+            var list = document.getElementById('nameList');
+            list.innerHTML = '';
+            for(var i=0; i<array.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.appendChild(document.createTextNode(array[i]));
+                list.appendChild(listItem);
+            }
+        }
+
+        window.onload = function() {
+            displayArray();
+        }
+    </script>
+</head>
+<body>
+    <h2>Arrays in JavaScript</h2>
+    <p>Enter a name:</p>
+    <input type="text" id="nameInput">
+    <button onclick="addName()">Add</button>
+
+    <h3>Names List:</h3>
+    <ol id="nameList"></ol>
+</body>
+</html>

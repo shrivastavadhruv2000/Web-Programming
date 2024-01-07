@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+            $().ready(()=>{
+                $("#tf1").change(()=>{
+                    console.log("1st")
+                    let str=$("#tf1").val()
+                    console.log("2nd")
+                    let uc=str.toUpperCase()
+
+                    console.log("3rs")
+                    $("p").html(`<b>${uc}</b>`)
+                    console.log("4th")
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="tf1"/>
+        <p></p>
+    </body>
+</html>
